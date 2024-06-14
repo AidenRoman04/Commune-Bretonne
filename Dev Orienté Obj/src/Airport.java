@@ -3,6 +3,7 @@
  * Represents an airport.
  * An airport has a name, an adress, and a departement.
  * An airport can be in a departement.
+ * 
  * @version 1.0
  */
 public class Airport {
@@ -13,8 +14,9 @@ public class Airport {
 
     /**
      * Airport constructor.
-     * @param name The airport name.
-     * @param adress The airport adress.
+     * 
+     * @param name        The airport name.
+     * @param adress      The airport adress.
      * @param departement The airport departement.
      */
     public Airport(String name, String adress, Department departement) {
@@ -29,6 +31,7 @@ public class Airport {
 
     /**
      * Returns the airport name.
+     * 
      * @return The airport name.
      */
     public String getName() {
@@ -37,6 +40,7 @@ public class Airport {
 
     /**
      * Sets the airport name.
+     * 
      * @param name The airport name.
      */
     public void setName(String name) {
@@ -49,6 +53,7 @@ public class Airport {
 
     /**
      * Returns the airport adress.
+     * 
      * @return The airport adress.
      */
     public String getAdress() {
@@ -57,6 +62,7 @@ public class Airport {
 
     /**
      * Sets the airport adress.
+     * 
      * @param adress The airport adress.
      */
     public void setAdress(String adress) {
@@ -69,6 +75,7 @@ public class Airport {
 
     /**
      * Returns the airport departement.
+     * 
      * @return The airport departement.
      */
     public Department getDepartement() {
@@ -77,6 +84,7 @@ public class Airport {
 
     /**
      * Sets the airport departement.
+     * 
      * @param departement The airport departement.
      */
     public void setDepartement(Department departement) {
