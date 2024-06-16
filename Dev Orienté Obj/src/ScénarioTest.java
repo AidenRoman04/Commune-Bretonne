@@ -15,10 +15,18 @@ import org.junit.*;
 
 public class ScénarioTest {
 
+    /**
+     * Launches the test.
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         org.junit.runner.JUnitCore.main("ScénarioTest");
     }
 
+    /**
+     * Test of the Station method.
+     */
     @Test
     public void testStation() {
         System.out.println("Test de la méthode Station");
@@ -33,6 +41,15 @@ public class ScénarioTest {
         System.out.println("");
     }
 
+    /**
+     * Test cases for the Station method.
+     * 
+     * @param code
+     * @param name
+     * @param isCargo
+     * @param isTraveler
+     * @param city
+     */
     public void testCasStation(int code, String name, boolean isCargo, boolean isTraveler, City city) {
         if (code < 0 || name == null || name.isEmpty() || city == null) {
             System.out.println("Test de la méthode Station – cas exception");
@@ -49,6 +66,9 @@ public class ScénarioTest {
         }
     }
 
+    /**
+     * Test of the Department method.
+     */
     @Test
     public void testDepartment() {
         System.out.println("Test de la méthode Department");
@@ -60,6 +80,14 @@ public class ScénarioTest {
         System.out.println("");
     }
 
+    /**
+     * Test cases for the Department method.
+     * 
+     * @param depID
+     * @param depName
+     * @param cultInvest2019
+     * @param airportList
+     */
     public void testCasDepartment(int depID, String depName, double cultInvest2019, ArrayList<Airport> airportList) {
         if ((depID < 0) || (cultInvest2019 < 0) || (depName == null || depName.isEmpty()) || (airportList == null)) {
             System.out.println("Test de la méthode Department – cas exception");
@@ -76,6 +104,9 @@ public class ScénarioTest {
         }
     }
 
+    /**
+     * Test of the City method.
+     */
     @Test
     public void testCity() {
         System.out.println("Test de la méthode City");
@@ -111,6 +142,23 @@ public class ScénarioTest {
         System.out.println("");
     }
 
+    /**
+     * Test cases for the City method.
+     * 
+     * @param code
+     * @param name
+     * @param population
+     * @param nbStation
+     * @param avgIncome
+     * @param avgIncomeTax
+     * @param avgWealthTax
+     * @param avgPropertyTax
+     * @param avgBusinessTax
+     * @param nbCulturalEvent
+     * @param dep
+     * @param y
+     * @param neighborList
+     */
     public void testCasCity(String code, String name, int population, int nbStation, float avgIncome,
             float avgIncomeTax,
             float avgWealthTax, float avgPropertyTax, float avgBusinessTax, int nbCulturalEvent, Department dep, Year y,
@@ -135,6 +183,9 @@ public class ScénarioTest {
         }
     }
 
+    /**
+     * Test of the Year method.
+     */
     @Test
     public void testYear() {
         System.out.println("Test de la méthode Year");
@@ -144,6 +195,12 @@ public class ScénarioTest {
         System.out.println("");
     }
 
+    /**
+     * Test cases for the Year method.
+     * 
+     * @param year
+     * @param inflationRate
+     */
     public void testCasYear(int year, double inflationRate) {
         if (year < 0 || inflationRate < 0) {
             System.out.println("Test de la méthode Year – cas exception");
@@ -160,6 +217,9 @@ public class ScénarioTest {
         }
     }
 
+    /**
+     * Test of the Airport method.
+     */
     @Test
     public void testAirport() {
         System.out.println("Test de la méthode Airport");
@@ -171,6 +231,13 @@ public class ScénarioTest {
         System.out.println("");
     }
 
+    /**
+     * Test cases for the Airport method.
+     * 
+     * @param code
+     * @param name
+     * @param dep
+     */
     public void testCasAirport(String code, String name, Department dep) {
         if (code == null || code.isEmpty() || name == null || name.isEmpty() || dep == null) {
             System.out.println("Test de la méthode Airport – cas exception");
