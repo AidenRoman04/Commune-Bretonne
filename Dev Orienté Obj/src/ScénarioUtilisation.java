@@ -126,5 +126,28 @@ public class ScénarioUtilisation {
                 System.out.println("");
                 System.out.println(years.toString());
                 System.out.println("");
+
+                // check if the station is in the city
+                System.out.println("\tTest check if the station 'Gare de lyon' is in the city 'Paris' :");
+                System.out.println(s.isInCity(c1));
+                System.out.println("");
+
+                // check if the airport is in the department
+                System.out.println("\tTest check if the airport 'CDG' is in the department 'Paris' :");
+                System.out.println(a1.isInDepartment(d));
+                System.out.println("");
+
+                // check if the department has the airport
+                System.out.println("\tTest check if the department 'Paris' has the airport 'CDG' :");
+                System.out.println(d.hasAirport(a1));
+                System.out.println("");
+
+                // check if the station is a traveler station
+                System.out.println("\tTest check if the station 'Gare de lyon' is a traveler station :");
+                System.out.println(s.isTraveler());
+                System.out.println("");
+
+                // check if
+
         }
 }
