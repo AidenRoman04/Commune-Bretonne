@@ -28,7 +28,7 @@ public class Department {
      */
     public Department(int depID, String depName, double cultInvest2019, ArrayList<Airport> airportList) {
         if ((depID < 0) || (cultInvest2019 < 0) || (depName == null || depName.isEmpty()) || (airportList == null)) {
-            throw new IllegalArgumentException("Department ID cannot be negative");
+            throw new IllegalArgumentException("Error in department parameters");
         } else {
             this.depID = depID;
             this.depName = depName;
@@ -163,10 +163,13 @@ public class Department {
     }
 
     /**
-     * Updates an airport in the list of airports.
+     * print the department
      */
     public String toString() {
-        return "Department ID: " + this.depID + ", Department Name: " + this.depName + ", Cultural Investment in 2019: "
-                + this.cultInvest2019 + ", Airports: " + this.airportList;
+        String res = "";
+        res += "Departement{ Department ID: " + this.depID + ", Department Name: " + this.depName
+                + ", Cultural Investment in 2019: "
+                + this.cultInvest2019 + ", Number of airports: " + this.getNumberOfAirports() + " }";
+        return res;
     }
 }

@@ -159,7 +159,7 @@ public class Station {
      */
     @Override
     public String toString() {
-        return "Station: " + this.name + ", Code: " + this.code + ", Cargo: " + this.isCargo + ", Traveler: "
-                + this.isTraveler + ", City: " + this.city;
+        return "Station{ Station: " + this.name + ", Code: " + this.code + ", Cargo: " + this.isCargo + ", Traveler: "
+                + this.isTraveler + ", City: " + this.city + "}";
     }
 }

@@ -84,8 +84,7 @@ public class Year {
      */
     @Override
     public String toString() {
-        return "Year: " + this.year + ", Inflation Rate: " + this.inflationRate + ", Average Prices: "
-                + this.toStringHashMap();
+        return "Year[ Year: " + this.year + ", Inflation Rate: " + this.inflationRate + "]";
     }
 
     /**

@@ -298,10 +298,10 @@ public class City {
      * @return The city as a string.
      */
     public String toString() {
-        return "City Code: " + cityCode + ", City Name: " + cityName + ", House Number: " + houseNumber
+        return "City { City Code: " + cityCode + ", City Name: " + cityName + ", House Number: " + houseNumber
                 + ", Flat Number: " + flatNumber + ", Average Price: " + averagePrice + ", Average M2 Price: "
                 + averageM2Price + ", Average Surface: " + averageSurface + ", Total Cultural Spending: "
-                + totalCulturalSpending + ", Total Budget: " + totalBudget + ", Population: " + population;
+                + totalCulturalSpending + ", Total Budget: " + totalBudget + ", Population: " + population + " }";
     }
 
     /**
