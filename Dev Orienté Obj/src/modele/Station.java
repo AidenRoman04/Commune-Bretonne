@@ -1,10 +1,12 @@
 package modele;
+
 /**
  * Station class
  * Represents a station in a city.
  * A station has a code, a name, and a city where it is located.
  * A station can be a cargo station, a traveler station, or both.
  * A station can be in a city.
+ * 
  * @version 1.0
  */
 public class Station {
@@ -17,11 +19,12 @@ public class Station {
 
     /**
      * Station constructor.
-     * @param code The station code.
-     * @param name The station name.
-     * @param isCargo Whether the station is a cargo station.
+     * 
+     * @param code       The station code.
+     * @param name       The station name.
+     * @param isCargo    Whether the station is a cargo station.
      * @param isTraveler Whether the station is a traveler station.
-     * @param city The city where the station is located.
+     * @param city       The city where the station is located.
      */
     public Station(int code, String name, boolean isCargo, boolean isTraveler, City city) {
         if (code < 0 || name == null || name.isEmpty() || city == null) {
@@ -37,6 +40,7 @@ public class Station {
 
     /**
      * Returns the station code.
+     * 
      * @return The station code.
      */
     public int getCode() {
@@ -45,6 +49,7 @@ public class Station {
 
     /**
      * Sets the station code.
+     * 
      * @param code The station code.
      */
     public void setCode(int code) {
@@ -57,6 +62,7 @@ public class Station {
 
     /**
      * Returns the station name.
+     * 
      * @return The station name.
      */
     public String getName() {
@@ -65,6 +71,7 @@ public class Station {
 
     /**
      * Sets the station name.
+     * 
      * @param name The station name.
      */
     public void setName(String name) {
@@ -77,6 +84,7 @@ public class Station {
 
     /**
      * Returns whether the station is a cargo station.
+     * 
      * @return true if the station is a cargo station, false otherwise.
      */
     public boolean isCargo() {
@@ -85,6 +93,7 @@ public class Station {
 
     /**
      * Sets whether the station is a cargo station.
+     * 
      * @param isCargo true if the station is a cargo station, false otherwise.
      */
     public void setCargo(boolean isCargo) {
@@ -93,6 +102,7 @@ public class Station {
 
     /**
      * Returns whether the station is a traveler station.
+     * 
      * @return true if the station is a traveler station, false otherwise.
      */
     public boolean isTraveler() {
@@ -101,6 +111,7 @@ public class Station {
 
     /**
      * Sets whether the station is a traveler station.
+     * 
      * @param isTraveler true if the station is a traveler station, false otherwise.
      */
     public void setTraveler(boolean isTraveler) {
@@ -109,6 +120,7 @@ public class Station {
 
     /**
      * Returns the city where the station is located.
+     * 
      * @return The city where the station is located.
      */
     public City getCity() {
@@ -117,6 +129,7 @@ public class Station {
 
     /**
      * Sets the city where the station is located.
+     * 
      * @param city The city where the station is located.
      */
     public void setCity(City city) {
@@ -146,6 +159,7 @@ public class Station {
      */
     @Override
     public String toString() {
-        return "Station: " + this.name + ", Code: " + this.code + ", Cargo: " + this.isCargo + ", Traveler: " + this.isTraveler + ", City: " + this.city;
+        return "Station: " + this.name + ", Code: " + this.code + ", Cargo: " + this.isCargo + ", Traveler: "
+                + this.isTraveler + ", City: " + this.city;
     }
 }
