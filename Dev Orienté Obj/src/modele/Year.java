@@ -92,12 +92,12 @@ public class Year {
      * 
      * @return The average price of the year.
      */
-    public double getAverageRate() {
+    public float getAverageRate() {
         if (averagePricePerCity == null || averagePricePerCity.isEmpty()) {
             throw new IllegalArgumentException("No average price data available for this year");
         }
 
-        double sum = 0;
+        float sum = 0;
         for (Float price : averagePricePerCity.values()) {
             sum += price;
         }

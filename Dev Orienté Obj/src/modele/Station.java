@@ -146,11 +146,11 @@ public class Station {
      * @param city The city to check.
      * @return true if the station is in the specified city, false otherwise.
      */
-    public boolean isInCity(City city) {
-        return this.city.equals(city);
+    public boolean isInCity(City city2) {
+        return this.city.equals(city2);
     }
 
-    public boolean equals(Station station) {
+    public boolean equalsCode(Station station) {
         return this.code == station.code;
     }
 
