@@ -3,12 +3,8 @@ import java.util.ArrayList;
 /**
  * City class
  * Represents a city in Britanny.
- * A city has a code, a name, a number of houses, a number of flats, an average
- * price, an average price per square meter, an average surface, a total
- * cultural spending, a total budget, a population, a department, a year, and a
- * list of neighbours.
+ * A city has a code, a name, a number of houses, a number of flats, an average price, an average price per square meter, an average surface, a total cultural spending, a total budget, a population, a department, a year, and a list of neighbours.
  * A city can be a neighbour of another city.
- * 
  * @version 1.0
  */
 public class City {
@@ -29,20 +25,19 @@ public class City {
 
     /**
      * City constructor.
-     * 
-     * @param cityCode              The city code.
-     * @param cityName              The city name.
-     * @param houseNumber           The number of houses.
-     * @param flatNumber            The number of flats.
-     * @param averagePrice          The average price.
-     * @param averageM2Price        The average price per square meter.
-     * @param averageSurface        The average surface.
+     * @param cityCode The city code.
+     * @param cityName The city name.
+     * @param houseNumber The number of houses.
+     * @param flatNumber The number of flats.
+     * @param averagePrice The average price.
+     * @param averageM2Price The average price per square meter.
+     * @param averageSurface The average surface.
      * @param totalCulturalSpending The total cultural spending.
-     * @param totalBudget           The total budget.
-     * @param population            The population.
-     * @param department            The department.
-     * @param year                  The year.
-     * @param neighbourList         The list of neighbours.
+     * @param totalBudget The total budget.
+     * @param population The population.
+     * @param department The department.
+     * @param year The year.
+     * @param neighbourList The list of neighbours.
      */
     public City(String cityCode, String cityName, int houseNumber, int flatNumber, float averagePrice,
             float averageM2Price, float averageSurface, float totalCulturalSpending, float totalBudget,
@@ -72,7 +67,6 @@ public class City {
 
     /**
      * Returns the city code.
-     * 
      * @return The city code.
      */
     public String getCityCode() {
@@ -81,7 +75,6 @@ public class City {
 
     /**
      * Sets the city code.
-     * 
      * @param cityCode The city code.
      */
     public void setCityCode(String cityCode) {
@@ -94,7 +87,6 @@ public class City {
 
     /**
      * Returns the city name.
-     * 
      * @return The city name.
      */
     public String getCityName() {
@@ -103,7 +95,6 @@ public class City {
 
     /**
      * Sets the city name.
-     * 
      * @param cityName The city name.
      */
     public void setCityName(String cityName) {
@@ -116,7 +107,6 @@ public class City {
 
     /**
      * Returns the number of houses.
-     * 
      * @return The number of houses.
      */
     public int getHouseNumber() {
@@ -125,7 +115,6 @@ public class City {
 
     /**
      * Sets the number of houses.
-     * 
      * @param houseNumber The number of houses.
      */
     public void setHouseNumber(int houseNumber) {
@@ -138,7 +127,6 @@ public class City {
 
     /**
      * Returns the number of flats.
-     * 
      * @return The number of flats.
      */
     public int getFlatNumber() {
@@ -147,7 +135,6 @@ public class City {
 
     /**
      * Sets the number of flats.
-     * 
      * @param flatNumber The number of flats.
      */
     public void setFlatNumber(int flatNumber) {
@@ -160,7 +147,6 @@ public class City {
 
     /**
      * Returns the average price.
-     * 
      * @return The average price.
      */
     public float getAveragePrice() {
@@ -169,7 +155,6 @@ public class City {
 
     /**
      * Sets the average price.
-     * 
      * @param averagePrice The average price.
      */
     public void setAveragePrice(float averagePrice) {
@@ -182,7 +167,6 @@ public class City {
 
     /**
      * Returns the average price per square meter.
-     * 
      * @return The average price per square meter.
      */
     public float getAverageM2Price() {
@@ -191,7 +175,6 @@ public class City {
 
     /**
      * Sets the average price per square meter.
-     * 
      * @param averageM2Price The average price per square meter.
      */
     public void setAverageM2Price(float averageM2Price) {
@@ -204,7 +187,6 @@ public class City {
 
     /**
      * Returns the average surface.
-     * 
      * @return The average surface.
      */
     public float getAverageSurface() {
@@ -213,7 +195,6 @@ public class City {
 
     /**
      * Sets the average surface.
-     * 
      * @param averageSurface The average surface.
      */
     public void setAverageSurface(float averageSurface) {
@@ -226,7 +207,6 @@ public class City {
 
     /**
      * Returns the total cultural spending.
-     * 
      * @return The total cultural spending.
      */
     public float getTotalCulturalSpending() {
@@ -235,7 +215,6 @@ public class City {
 
     /**
      * Sets the total cultural spending.
-     * 
      * @param totalCulturalSpending The total cultural spending.
      */
     public void setTotalCulturalSpending(float totalCulturalSpending) {
@@ -248,7 +227,6 @@ public class City {
 
     /**
      * Returns the total budget.
-     * 
      * @return The total budget.
      */
     public float getTotalBudget() {
@@ -257,7 +235,6 @@ public class City {
 
     /**
      * Sets the total budget.
-     * 
      * @param totalBudget The total budget.
      */
     public void setTotalBudget(float totalBudget) {
@@ -270,7 +247,6 @@ public class City {
 
     /**
      * Returns the population.
-     * 
      * @return The population.
      */
     public float getPopulation() {
@@ -279,7 +255,6 @@ public class City {
 
     /**
      * Sets the population.
-     * 
      * @param population The population.
      */
     public void setPopulation(float population) {
@@ -292,7 +267,6 @@ public class City {
 
     /**
      * Returns the city as a string.
-     * 
      * @return The city as a string.
      */
     public String toString() {
@@ -304,7 +278,6 @@ public class City {
 
     /**
      * Returns the department.
-     * 
      * @return The department.
      */
     public Department getDepartment() {
@@ -313,7 +286,6 @@ public class City {
 
     /**
      * Sets the department.
-     * 
      * @param department The department.
      */
     public void setDepartment(Department department) {
@@ -326,7 +298,6 @@ public class City {
 
     /**
      * Returns the year.
-     * 
      * @return The year.
      */
     public Year getYear() {
@@ -335,7 +306,6 @@ public class City {
 
     /**
      * Sets the year.
-     * 
      * @param year The year.
      */
     public void setYear(Year year) {
@@ -348,7 +318,6 @@ public class City {
 
     /**
      * Returns the list of neighbours.
-     * 
      * @return The list of neighbours.
      */
     public ArrayList<City> getNeighborList() {
@@ -357,7 +326,6 @@ public class City {
 
     /**
      * Sets the list of neighbours.
-     * 
      * @param neighbours The list of neighbours.
      */
     public void setNeighborList(ArrayList<City> neighbours) {
@@ -368,7 +336,6 @@ public class City {
 
     /**
      * Returns whether the city is a neighbour.
-     * 
      * @param otherCity The other city.
      * @return true if the city is a neighbour, false otherwise.
      */
@@ -382,14 +349,13 @@ public class City {
 
     /**
      * Calcule le prix relatif de la ville par rapport à ses voisins.
-     * 
      * @return Le prix relatif de la ville par rapport à ses voisins.
      */
     public float computeRelativePrice() {
         if (neighbourList == null || neighbourList.isEmpty()) {
             throw new IllegalArgumentException("Neighbour list cannot be empty");
         }
-
+    
         float sum = 0;
         for (City neighbour : neighbourList) {
             sum += neighbour.getAveragePrice();
@@ -402,7 +368,6 @@ public class City {
 
     /**
      * Calcule le budget culturel par habitant.
-     * 
      * @return Le budget culturel par habitant.
      */
     public float computeCultBudgetPerCapita() {
@@ -411,7 +376,6 @@ public class City {
 
     /**
      * Calcule le budget culturel par habitant de la ville la plus proche.
-     * 
      * @return Le budget culturel par habitant de la ville la plus proche.
      */
     public float computeNeighbourCultBudgetPerCapitaAverage() {
