@@ -19,6 +19,10 @@ import modele.*;
 public class Scénario {
 
     public static void main(String[] args) {
+        System.out.println("\tTest Scénario :");
+        System.out.println("");
+        System.out.println("initializing objects :");
+
         // create empty department for initialization
         Department emptyDepartment = new Department(0, "empty", 0, new ArrayList<Airport>());
 
@@ -83,6 +87,11 @@ public class Scénario {
         years.put(2020, y);
         years.put(2019, y2);
         years.put(2018, y3);
+
+        System.out.println("intialisation done.");
+
+        System.out.println("");
+        System.out.println("launching tests :");
 
         // Display the city
         System.out.println("\tTest print city after construction :");
