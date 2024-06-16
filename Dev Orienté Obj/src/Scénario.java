@@ -1,6 +1,15 @@
 
 /**
- * Scénario
+ * Scénario class to test the model package
+ * 
+ * @version 1.0
+ * 
+ * @see modele
+ * @see modele.Airport
+ * @see modele.City
+ * @see modele.Department
+ * @see modele.Station
+ * @see modele.Year
  */
 import java.util.ArrayList;
 import java.util.HashMap;
