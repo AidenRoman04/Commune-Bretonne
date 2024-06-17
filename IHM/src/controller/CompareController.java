@@ -51,6 +51,8 @@ public class CompareController {
     @FXML // fx:id="citySearchField"
     private TextField citySearchField; // Value injected by FXMLLoader
 
+    private ArrayList<String> cityList = new ArrayList<String>();
+
     @FXML
     void launchResearchData(ActionEvent event) {
         // le code doit récuperrer les données de la ville dans les ComboBox et grace au
@@ -62,6 +64,9 @@ public class CompareController {
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         setupEventHandlers();
+        assert city1 != null : "fx:id=\"city1\" was not injected: check your FXML file 'compare.fxml'.";
+        assert city2 != null : "fx:id=\"city2\" was not injected: check your FXML file 'compare.fxml'.";
+        assert city3 != null : "fx:id=\"city3\" was not injected: check your FXML file 'compare.fxml'.";
 
         assert checkBoxPane != null : "fx:id=\"checkBoxPane\" was not injected: check your FXML file 'compare.fxml'.";
         assert vBoxContainer != null : "fx:id=\"vBoxContainer\" was not injected: check your FXML file 'compare.fxml'.";
@@ -93,10 +98,20 @@ public class CompareController {
      */
     public void fillCityList(ArrayList<String> cityList, ComboBox<String> city1, ComboBox<String> city2,
             ComboBox<String> city3) {
+        city1.getItems().add("N/A");
+        city2.getItems().add("N/A");
+        city3.getItems().add("N/A");
         for (String city : cityList) {
             city1.getItems().add(city);
             city2.getItems().add(city);
             city3.getItems().add(city);
         }
+        city1.setValue("N/A");
+        city2.setValue("N/A");
+        city3.setValue("N/A");
+    }
+
+    public void setCityList(ArrayList<String> cityList) {
+        this.cityList = cityList;
     }
 }
