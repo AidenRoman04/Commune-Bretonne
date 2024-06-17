@@ -111,7 +111,7 @@ public class CompareController {
         city3.setValue("N/A");
     }
 
-    public void setCityList(ArrayList<String> cityList) {
-        this.cityList = cityList;
+    public void setCityList() {
+        // call the methode of the DAO to get the list of cities
     }
 }
