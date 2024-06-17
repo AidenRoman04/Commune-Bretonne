@@ -1,5 +1,6 @@
 package model;
 
 public class Model {
-    // Ajoutez votre logique de modèle ici
+    // Ajoutez le DAO et les méthodes de traitement des données ici pour les
+    // renvoyer au contrôleur
 }
