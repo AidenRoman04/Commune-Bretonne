@@ -64,12 +64,13 @@ public class MainController {
     }
 
     @FXML // bouton pour aller a la page comparer
-    void comparer(ActionEvent event) {
-
+    void comparer(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ressource/compare.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
-
-    }
 }
