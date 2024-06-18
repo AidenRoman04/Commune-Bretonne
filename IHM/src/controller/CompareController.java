@@ -8,12 +8,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -51,6 +54,27 @@ public class CompareController {
 
     @FXML // fx:id="citySearchField"
     private TextField citySearchField; // Value injected by FXMLLoader
+
+    @FXML
+    private Label infoCity1; // Value injected by FXMLLoader
+
+    @FXML
+    private Label infoCity2; // Value injected by FXMLLoader
+
+    @FXML
+    private Label infoCity3; // Value injected by FXMLLoader
+
+    @FXML
+    private Label budgetCity1; // Value injected by FXMLLoader
+
+    @FXML
+    private Label budgetCity2; // Value injected by FXMLLoader
+
+    @FXML
+    private Label budgetCity3; // Value injected by FXMLLoader
+
+    @FXML
+    private Button compare; // Value injected by FXMLLoader
 
     private ArrayList<String> cityList = new ArrayList<>();
     private ObservableList<String> observableCityList = FXCollections.observableArrayList();
@@ -100,6 +124,10 @@ public class CompareController {
                 e.printStackTrace();
             }
         });
+
+        compare.onMouseClickedProperty().set(event -> {
+            getInfoCity();
+        });
     }
 
     /**
@@ -129,9 +157,11 @@ public class CompareController {
     }
 
     public void initializeDataBase() {
+
         System.out.println("Starting database initialization");
         database = dbDAO.getDatabase();
         System.out.println("Database initialized");
+
     }
 
     private void initializeComboBox(ComboBox<String> comboBox) {
@@ -166,9 +196,33 @@ public class CompareController {
         // le code doit récupérer les données de la ville dans les ComboBox et grâce au
         // DAO afficher les informations générales de la ville (nom, population,
         // superficie, etc.)
+        ArrayList<City> cities = database.getCities();
+        if (city1.getValue() != null) {
+            for (City city : cities) {
+                if (city.getCityName().equals(city1.getValue())) {
+                    infoCity1.setText(city.toString());
+                } else {
+                    infoCity1.setText("City not found");
+                }
+            }
 
-        String name = city1.getValue();
-        City city = ((Object) database).getCity(name);
+        } else if (city2.getValue() != null) {
+            for (City city : cities) {
+                if (city.getCityName().equals(city2.getValue())) {
+                    infoCity2.setText(city.toString());
+                } else {
+                    infoCity2.setText("City not found");
+                }
+            }
+        } else if (city3.getValue() != null) {
+            for (City city : cities) {
+                if (city.getCityName().equals(city3.getValue())) {
+                    infoCity3.setText(city.toString());
+                } else {
+                    infoCity3.setText("City not found");
+                }
+            }
+        }
 
     }
 }

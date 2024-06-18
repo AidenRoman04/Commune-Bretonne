@@ -83,7 +83,7 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <Button layoutX="382.0" layoutY="262.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="172.0" text="Visualiser les données">
+                        <Button fx:id="compare" layoutX="382.0" layoutY="262.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="172.0" text="Visualiser les données">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -98,12 +98,12 @@
                         <Separator layoutX="170.0" layoutY="93.0" prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
                         <Separator layoutX="170.0" layoutY="294.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
                         <Separator layoutX="170.0" layoutY="359.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
-                        <Label layoutX="170.0" layoutY="184.0" text="Label" />
-                        <Label layoutX="373.0" layoutY="184.0" text="Label" />
-                        <Label layoutX="591.0" layoutY="184.0" text="Label" />
-                        <Label layoutX="170.0" layoutY="436.0" text="Label" />
-                        <Label layoutX="373.0" layoutY="436.0" text="Label" />
-                        <Label layoutX="591.0" layoutY="436.0" text="Label" />
+                        <Label fx:id="infoCity1" layoutX="170.0" layoutY="184.0" text="Label" />
+                        <Label fx:id="infoCity2" layoutX="373.0" layoutY="184.0" text="Label" />
+                        <Label fx:id="infoCity3" layoutX="591.0" layoutY="184.0" text="Label" />
+                        <Label fx:id="budgetCity1" layoutX="170.0" layoutY="436.0" text="Label" />
+                        <Label fx:id="budgetCity2" layoutX="373.0" layoutY="436.0" text="Label" />
+                        <Label fx:id="budgetCity3" layoutX="591.0" layoutY="436.0" text="Label" />
                      </children>
                   </Pane>
                </children>

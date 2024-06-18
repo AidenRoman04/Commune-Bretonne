@@ -16,15 +16,18 @@ public class City {
 
     /**
      * City constructor
-     * @param cityCode cityID
-     * @param cityName name of the city
-     * @param department department of the city
+     * 
+     * @param cityCode      cityID
+     * @param cityName      name of the city
+     * @param department    department of the city
      * @param neighbourList neighbour list
-     * @param stations station list
-     * @param data data list
+     * @param stations      station list
+     * @param data          data list
      */
-    public City(String cityCode, String cityName, Department department, ArrayList<City> neighbourList, ArrayList<Station> stations, ArrayList<Data> data) {
-        if (cityCode == null || cityCode.isEmpty() || cityName == null || cityName.isEmpty() || neighbourList == null || stations == null || data == null) {
+    public City(String cityCode, String cityName, Department department, ArrayList<City> neighbourList,
+            ArrayList<Station> stations, ArrayList<Data> data) {
+        if (cityCode == null || cityCode.isEmpty() || cityName == null || cityName.isEmpty() || neighbourList == null
+                || stations == null || data == null) {
             throw new IllegalArgumentException(
                     "City code, name, department, stations, data and neighbourList cannot be empty");
         } else {
@@ -62,14 +65,14 @@ public class City {
     }
 
     public String toString() { // Y'a pas tout ?
-        String res =  "City Code: " + cityCode + ", City Name: " + cityName;
-        res += ", Department : " + this.department.toString();
-        res += ", Stations : ";
-        for(Station s : this.stations){
+        String res = "City Code: " + cityCode + ",\n City Name: " + cityName;
+        res += ",\n Department : " + this.department.toString();
+        res += ",\n Stations : ";
+        for (Station s : this.stations) {
             res += s.toString();
         }
-        res += ", Data : ";
-        for(Data d : this.data){
+        res += ",\n Data : ";
+        for (Data d : this.data) {
             res += d.toString();
         }
         return res;
