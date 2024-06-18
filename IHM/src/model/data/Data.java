@@ -172,9 +172,25 @@ public class Data {
 
     public String toStringDataApp() {
         String res = "";
-        res += "Population : " + this.population + "\n";
+        res += " - Year : " + this.year.getYear() + "\n";
+        if (population != -1)
+            res += "Population : " + this.population + "\n";
+
         res += "House number : " + this.houseNumber + "\n";
         res += "flat number : " + this.flatNumber + "\n";
+        return res;
+    }
+
+    public String toStringDataAppBudgetData() {
+        String res = "";
+        res += " - Year : " + this.year.getYear() + "\n";
+        if (this.totalBudget != -1) {
+            res += "Total Budget : " + this.totalBudget + "\n";
+            res += "Total Cultural Spending : " + this.totalCulturalSpending + "\n";
+        } else {
+            res += "No data this year\n";
+        }
+
         return res;
     }
 }

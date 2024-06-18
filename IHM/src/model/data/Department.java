@@ -87,4 +87,20 @@ public class Department {
         }
         return res;
     }
+
+    public String toStringApp() {
+        String res = " ";
+        res += "" + this.depName;
+        return res;
+    }
+
+    public String toStringAppBudget() {
+        String res = "";
+        if (this.cultInvest2019 != -1.0) {
+            res += "" + this.cultInvest2019 + ",\n";
+        } else {
+            res += "No cultural investment data available";
+        }
+        return res;
+    }
 }

@@ -119,11 +119,22 @@ public class City {
      * @return
      */
     public String toStringApp() {
-        String res = " ";
+        String res = "";
+        res += "City name : " + this.cityName + ",\n";
+        res += "Department : " + this.department.toStringApp() + ",\n";
         for (Data d : this.data) {
             res += d.toStringDataApp();
         }
 
+        return res;
+    }
+
+    public String toStringAppBudget() {
+        String res = "";
+        for (Data d : this.data) {
+            res += d.toStringDataAppBudgetData();
+        }
+        res += "\nDepartment (2019) : " + this.department.toStringAppBudget() + ",\n";
         return res;
     }
 }

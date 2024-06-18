@@ -41,7 +41,7 @@
    <center>
       <ScrollPane prefHeight="500.0" prefWidth="950.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="vBoxContainer" prefHeight="1026.0" prefWidth="935.0">
+            <VBox fx:id="vBoxContainer" prefHeight="2255.0" prefWidth="935.0">
                <children>
                   <Pane prefHeight="166.0" prefWidth="935.0">
                      <children>
@@ -97,7 +97,7 @@
                         <Separator layoutX="170.0" layoutY="93.0" prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
                      </children>
                   </Pane>
-                  <HBox fx:id="hboxInfo" alignment="CENTER" prefHeight="146.0" prefWidth="935.0" spacing="20.0">
+                  <HBox fx:id="hboxInfo" alignment="CENTER" prefHeight="358.0" prefWidth="935.0" spacing="20.0">
                      <children>
                         <Label fx:id="infoCity1" alignment="CENTER" text="Label1" />
                         <Label fx:id="infoCity2" alignment="CENTER" text="Label2" />
@@ -111,11 +111,11 @@
                         <Label layoutX="170.0" layoutY="28.0" text="Budgets" />
                      </children>
                   </Pane>
-                  <HBox fx:id="hboxBudget" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                  <HBox fx:id="hboxInfo1" alignment="CENTER" prefHeight="358.0" prefWidth="935.0" spacing="20.0">
                      <children>
-                        <Label fx:id="budgetCity1" text="Label1" />
-                        <Label fx:id="budgetCity2" text="Label2" />
-                        <Label fx:id="budgetCity3" text="Label3" />
+                        <Label fx:id="budgetCity1" alignment="CENTER" text="Label1" />
+                        <Label fx:id="budgetCity2" alignment="CENTER" text="Label2" />
+                        <Label fx:id="budgetCity3" alignment="CENTER" text="Label3" />
                      </children>
                   </HBox>
                </children>

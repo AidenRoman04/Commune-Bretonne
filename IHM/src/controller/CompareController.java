@@ -214,46 +214,56 @@ public class CompareController {
 
     public void getInfoCity1() {
         String text = "City not found"; // Initialisation avec "City not found"
+        String budget = "Budget not found"; // Initialisation avec "City not found
+        infoCity1.setText("");
         if (city1.getValue() != null) {
             for (City city : this.cities) {
                 city1.setVisible(true);
                 if (city.getCityName().equals(city1.getValue())) {
                     text = city.toStringApp();
+                    budget = city.toStringAppBudget();
                 }
             }
             infoCity1.setText(text); // Définir le texte après la boucle
-        } else {
-            infoCity1.setVisible(false);
+            budgetCity1.setText(budget);
         }
     }
 
     public void getInfoCity2() {
-        String text = "City not found"; // Initialisation avec "City not found"
-        if (city2.getValue() != null) {
-            for (City city : this.cities) {
-                city2.setVisible(true);
-                if (city.getCityName().equals(city2.getValue())) {
-                    text = city.toStringApp();
+        try {
+            String text = "City not found"; // Initialisation avec "City not found"
+            String budget = "Budget not found"; // Initialisation avec "City not found
+            infoCity2.setText("");
+            if (city2.getValue() != null) {
+                for (City city : this.cities) {
+                    city2.setVisible(true);
+                    if (city.getCityName().equals(city2.getValue())) {
+                        text = city.toStringApp();
+                        budget = city.toStringAppBudget();
+                    }
                 }
+                infoCity2.setText(text); // Définir le texte après la boucle
+                budgetCity2.setText(budget);
             }
-            infoCity2.setText(text); // Définir le texte après la boucle
-        } else {
-            infoCity2.setVisible(false);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     public void getInfoCity3() {
         String text = "City not found"; // Initialisation avec "City not found"
+        String budget = "Budget not found"; // Initialisation avec "City not found
+        infoCity3.setText("");
         if (city3.getValue() != null) {
             for (City city : this.cities) {
                 city3.setVisible(true);
                 if (city.getCityName().equals(city3.getValue())) {
                     text = city.toStringApp();
+                    budget = city.toStringAppBudget();
                 }
             }
             infoCity3.setText(text); // Définir le texte après la boucle
-        } else {
-            infoCity3.setVisible(false);
+            budgetCity3.setText(budget);
         }
     }
 
