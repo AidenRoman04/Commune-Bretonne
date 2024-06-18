@@ -64,16 +64,20 @@ public class City {
         }
     }
 
-    public String toString() { // Y'a pas tout ?
+    public String toString() {
         String res = "City Code: " + cityCode + ",\n City Name: " + cityName;
         res += ",\n Department : " + this.department.toString();
         res += ",\n Stations : ";
-        for (Station s : this.stations) {
-            res += s.toString();
+        if (this.stations.isEmpty()) {
+            res += "No stations";
+        } else {
+            for (Station s : this.stations) {
+                res += s.toString() + "\n";
+            }
         }
         res += ",\n Data : ";
         for (Data d : this.data) {
-            res += d.toString();
+            res += d.toString() + "\n";
         }
         return res;
     }

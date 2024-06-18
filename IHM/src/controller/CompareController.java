@@ -19,6 +19,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -76,11 +77,19 @@ public class CompareController {
     @FXML
     private Button compare; // Value injected by FXMLLoader
 
+    @FXML
+    private HBox hboxInfo;
+
+    @FXML
+    private HBox hboxBudget;
+
     private ArrayList<String> cityList = new ArrayList<>();
     private ObservableList<String> observableCityList = FXCollections.observableArrayList();
 
     private DatabaseDAO dbDAO = new DatabaseDAO();
     private Database database;
+
+    private ArrayList<City> cities;
 
     @FXML
     void launchResearchData(ActionEvent event) {
@@ -97,6 +106,15 @@ public class CompareController {
         initializeComboBox(city1);
         initializeComboBox(city2);
         initializeComboBox(city3);
+        bindHBoxHeights();
+
+        // Ajouter du padding aux labels
+        infoCity1.setStyle("-fx-padding: 5px 0 0 0;");
+        infoCity2.setStyle("-fx-padding: 5px 0 0 0;");
+        infoCity3.setStyle("-fx-padding: 5px 0 0 0;");
+
+        // Ajouter les labels à la HBox
+        hboxInfo.getChildren().addAll(infoCity1, infoCity2, infoCity3);
 
         assert city1 != null : "fx:id=\"city1\" was not injected: check your FXML file 'compare.fxml'.";
         assert city2 != null : "fx:id=\"city2\" was not injected: check your FXML file 'compare.fxml'.";
@@ -148,7 +166,7 @@ public class CompareController {
     }
 
     public void setCityList() {
-        ArrayList<City> cities = database.getCities();
+        this.cities = database.getCities();
         for (City city : cities) {
             this.cityList.add(city.getCityName());
         }
@@ -193,36 +211,75 @@ public class CompareController {
     }
 
     public void getInfoCity() {
-        // le code doit récupérer les données de la ville dans les ComboBox et grâce au
-        // DAO afficher les informations générales de la ville (nom, population,
-        // superficie, etc.)
-        ArrayList<City> cities = database.getCities();
-        if (city1.getValue() != null) {
-            for (City city : cities) {
-                if (city.getCityName().equals(city1.getValue())) {
-                    infoCity1.setText(city.toString());
-                } else {
-                    infoCity1.setText("City not found");
-                }
-            }
-
-        } else if (city2.getValue() != null) {
-            for (City city : cities) {
-                if (city.getCityName().equals(city2.getValue())) {
-                    infoCity2.setText(city.toString());
-                } else {
-                    infoCity2.setText("City not found");
-                }
-            }
-        } else if (city3.getValue() != null) {
-            for (City city : cities) {
-                if (city.getCityName().equals(city3.getValue())) {
-                    infoCity3.setText(city.toString());
-                } else {
-                    infoCity3.setText("City not found");
-                }
-            }
-        }
-
+        getInfoCity1();
+        getInfoCity2();
+        getInfoCity3();
     }
+
+    public void getInfoCity1() {
+        String text = "City not found"; // Initialisation avec "City not found"
+        if (city1.getValue() != null) {
+            for (City city : this.cities) {
+                city1.setVisible(true);
+                if (city.getCityName().equals(city1.getValue())) {
+                    text = city.toString();
+                }
+            }
+            infoCity1.setText(text); // Définir le texte après la boucle
+        } else {
+            infoCity1.setVisible(false);
+        }
+    }
+
+    public void getInfoCity2() {
+        String text = "City not found"; // Initialisation avec "City not found"
+        if (city2.getValue() != null) {
+            for (City city : this.cities) {
+                city2.setVisible(true);
+                if (city.getCityName().equals(city2.getValue())) {
+                    text = city.toString();
+                }
+            }
+            infoCity2.setText(text); // Définir le texte après la boucle
+        } else {
+            infoCity2.setVisible(false);
+        }
+    }
+
+    public void getInfoCity3() {
+        String text = "City not found"; // Initialisation avec "City not found"
+        if (city3.getValue() != null) {
+            for (City city : this.cities) {
+                city3.setVisible(true);
+                if (city.getCityName().equals(city3.getValue())) {
+                    text = city.toString();
+                }
+            }
+            infoCity3.setText(text); // Définir le texte après la boucle
+        } else {
+            infoCity3.setVisible(false);
+        }
+    }
+
+    private void bindHBoxHeights() {
+        // Assurez-vous que les labels peuvent augmenter en hauteur
+        infoCity1.setWrapText(true);
+        infoCity2.setWrapText(true);
+        infoCity3.setWrapText(true);
+        budgetCity1.setWrapText(true);
+        budgetCity2.setWrapText(true);
+        budgetCity3.setWrapText(true);
+
+        // Liaison des hauteurs des HBox à la hauteur totale des labels
+        hboxInfo.prefHeightProperty().bind(
+                infoCity1.heightProperty()
+                        .add(infoCity2.heightProperty())
+                        .add(infoCity3.heightProperty()));
+
+        hboxBudget.prefHeightProperty().bind(
+                budgetCity1.heightProperty()
+                        .add(budgetCity2.heightProperty())
+                        .add(budgetCity3.heightProperty()));
+    }
+
 }

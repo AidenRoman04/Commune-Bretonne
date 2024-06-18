@@ -17,20 +17,21 @@ public class Data {
 
     /**
      * Data constructor
-     * @param cityID the cityID
-     * @param houseNumber house number
-     * @param flatNumber flat number
-     * @param averagePrice average price
-     * @param averageM2Price average square meter price
-     * @param averageSurface average surface
+     * 
+     * @param cityID                the cityID
+     * @param houseNumber           house number
+     * @param flatNumber            flat number
+     * @param averagePrice          average price
+     * @param averageM2Price        average square meter price
+     * @param averageSurface        average surface
      * @param totalCulturalSpending total cultural spending
-     * @param totalBudget total budget
-     * @param population population
-     * @param year year
+     * @param totalBudget           total budget
+     * @param population            population
+     * @param year                  year
      */
     public Data(int cityID, int houseNumber, int flatNumber, float averagePrice, float averageM2Price,
-                float averageSurface, float totalCulturalSpending, float totalBudget,
-                float population, Year year){
+            float averageSurface, float totalCulturalSpending, float totalBudget,
+            float population, Year year) {
         this.cityID = cityID;
         this.houseNumber = houseNumber;
         this.flatNumber = flatNumber;
@@ -42,12 +43,15 @@ public class Data {
         this.population = population;
         this.year = year;
     }
-    public int getCityID(){
+
+    public int getCityID() {
         return this.cityID;
     }
-    public void setCityID(int cityID){
+
+    public void setCityID(int cityID) {
         this.cityID = cityID;
     }
+
     public int getHouseNumber() {
         return this.houseNumber;
     }
@@ -143,6 +147,7 @@ public class Data {
             this.population = population;
         }
     }
+
     public Year getYear() {
         return this.year;
     }
@@ -153,5 +158,15 @@ public class Data {
         } else {
             this.year = year;
         }
+    }
+
+    public String toString() {
+        String res = "";
+        res += "City ID: " + this.cityID + ",\n House Number: " + this.houseNumber;
+        res += ",\n Flat Number: " + this.flatNumber + ",\n Average Price: " + this.averagePrice;
+        res += ",\n Average M2 Price: " + this.averageM2Price + ",\n Average Surface: " + this.averageSurface;
+        res += ",\n Total Cultural Spending: " + this.totalCulturalSpending + ",\n Total Budget: " + this.totalBudget;
+        res += ",\n Population: " + this.population + ",\n Year: " + this.year.getYear();
+        return res;
     }
 }

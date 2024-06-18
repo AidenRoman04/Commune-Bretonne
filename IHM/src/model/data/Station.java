@@ -13,14 +13,15 @@ public class Station {
 
     /**
      * Station constructor
-     * @param cityID cityID
-     * @param code station code
-     * @param name station name
-     * @param isCargo true if the station welcomes cargo trains, false if not
+     * 
+     * @param cityID     cityID
+     * @param code       station code
+     * @param name       station name
+     * @param isCargo    true if the station welcomes cargo trains, false if not
      * @param isTraveler true if the station welcomes passenger trains, false if not
      */
     public Station(int cityID, int code, String name, boolean isCargo, boolean isTraveler) {
-        if (cityID < 0||code < 0 || name == null || name.isEmpty()) {
+        if (cityID < 0 || code < 0 || name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Station code, cityID and name cannot be empty");
         } else {
             this.cityID = cityID;
@@ -30,10 +31,12 @@ public class Station {
             this.isTraveler = isTraveler;
         }
     }
-    public int getCityID(){
+
+    public int getCityID() {
         return this.cityID;
     }
-    public void setCityID(int cityID){
+
+    public void setCityID(int cityID) {
         this.cityID = cityID;
     }
 
@@ -76,7 +79,9 @@ public class Station {
     public void setTraveler(boolean isTraveler) {
         this.isTraveler = isTraveler;
     }
-    public String toString(){
-        return "Code : " + this.code + " Name : " + this.name + " isCargo : " + this.isCargo + " isTraveler : " + this.isTraveler; 
+
+    public String toString() {
+        return "\nCode : " + this.code + "\nName : " + this.name + "\nisCargo : " + this.isCargo + "\nisTraveler : "
+                + this.isTraveler;
     }
 }

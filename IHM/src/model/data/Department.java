@@ -14,10 +14,11 @@ public class Department {
 
     /**
      * Department constructor
-     * @param depID depID
-     * @param depName name of the department
+     * 
+     * @param depID          depID
+     * @param depName        name of the department
      * @param cultInvest2019 2019 cultural invest
-     * @param airportList airport list
+     * @param airportList    airport list
      */
     public Department(int depID, String depName, double cultInvest2019, ArrayList<Airport> airportList) {
         if ((depID < 0) || (cultInvest2019 < 0) || (depName == null || depName.isEmpty()) || (airportList == null)) {
@@ -75,13 +76,14 @@ public class Department {
             this.airportList.add(a);
         }
     }
-    public String toString(){
+
+    public String toString() {
         String res = this.depName + " : ";
-        res += "depId = " + this.depID + ", ";
-        res += "cultInvest = " + this.cultInvest2019 + ", ";
-        res += "airportList : ";
-        for(Airport a : this.airportList){
-            res += a.toString() + ", ";
+        res += "\ndepId = " + this.depID + ", ";
+        res += "\ncultInvest = " + this.cultInvest2019 + ", ";
+        res += "\nairportList : ";
+        for (Airport a : this.airportList) {
+            res += a.toString() + ",\n";
         }
         return res;
     }

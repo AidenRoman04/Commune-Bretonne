@@ -11,8 +11,9 @@ public class Airport {
 
     /**
      * Airport constructor
-     * @param name name of the airport
-     * @param adress adress
+     * 
+     * @param name       name of the airport
+     * @param adress     adress
      * @param department department id
      */
     public Airport(String name, String adress, int department) {
@@ -48,17 +49,20 @@ public class Airport {
             this.adress = adress;
         }
     }
-    public int getDepartment(){
+
+    public int getDepartment() {
         return this.department;
     }
-    public void setDepartment(int department){
-        if((department == 22) || (department == 29) || (department == 35) || (department == 56)){
+
+    public void setDepartment(int department) {
+        if ((department == 22) || (department == 29) || (department == 35) || (department == 56)) {
             this.department = department;
-        }else{
+        } else {
             throw new IllegalArgumentException("Invalid department");
         }
     }
-    public String toString(){
-        return "Airport name : " + this.name + " adress : " + this.adress + " dep : " + this.department;
+
+    public String toString() {
+        return "\nAirport name : " + this.name + "\nadress : " + this.adress + "\ndep : " + this.department;
     }
 }
