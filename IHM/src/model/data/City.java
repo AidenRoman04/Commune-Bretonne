@@ -112,4 +112,18 @@ public class City {
         }
     }
 
+    /**
+     * print the city information for the app :
+     * hab, km²,hab/km², dep and the airports/stations
+     * 
+     * @return
+     */
+    public String toStringApp() {
+        String res = " ";
+        for (Data d : this.data) {
+            res += d.toStringDataApp();
+        }
+
+        return res;
+    }
 }

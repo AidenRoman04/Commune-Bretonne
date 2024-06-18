@@ -106,15 +106,11 @@ public class CompareController {
         initializeComboBox(city1);
         initializeComboBox(city2);
         initializeComboBox(city3);
-        bindHBoxHeights();
 
         // Ajouter du padding aux labels
         infoCity1.setStyle("-fx-padding: 5px 0 0 0;");
         infoCity2.setStyle("-fx-padding: 5px 0 0 0;");
         infoCity3.setStyle("-fx-padding: 5px 0 0 0;");
-
-        // Ajouter les labels à la HBox
-        hboxInfo.getChildren().addAll(infoCity1, infoCity2, infoCity3);
 
         assert city1 != null : "fx:id=\"city1\" was not injected: check your FXML file 'compare.fxml'.";
         assert city2 != null : "fx:id=\"city2\" was not injected: check your FXML file 'compare.fxml'.";
@@ -222,7 +218,7 @@ public class CompareController {
             for (City city : this.cities) {
                 city1.setVisible(true);
                 if (city.getCityName().equals(city1.getValue())) {
-                    text = city.toString();
+                    text = city.toStringApp();
                 }
             }
             infoCity1.setText(text); // Définir le texte après la boucle
@@ -237,7 +233,7 @@ public class CompareController {
             for (City city : this.cities) {
                 city2.setVisible(true);
                 if (city.getCityName().equals(city2.getValue())) {
-                    text = city.toString();
+                    text = city.toStringApp();
                 }
             }
             infoCity2.setText(text); // Définir le texte après la boucle
@@ -252,34 +248,13 @@ public class CompareController {
             for (City city : this.cities) {
                 city3.setVisible(true);
                 if (city.getCityName().equals(city3.getValue())) {
-                    text = city.toString();
+                    text = city.toStringApp();
                 }
             }
             infoCity3.setText(text); // Définir le texte après la boucle
         } else {
             infoCity3.setVisible(false);
         }
-    }
-
-    private void bindHBoxHeights() {
-        // Assurez-vous que les labels peuvent augmenter en hauteur
-        infoCity1.setWrapText(true);
-        infoCity2.setWrapText(true);
-        infoCity3.setWrapText(true);
-        budgetCity1.setWrapText(true);
-        budgetCity2.setWrapText(true);
-        budgetCity3.setWrapText(true);
-
-        // Liaison des hauteurs des HBox à la hauteur totale des labels
-        hboxInfo.prefHeightProperty().bind(
-                infoCity1.heightProperty()
-                        .add(infoCity2.heightProperty())
-                        .add(infoCity3.heightProperty()));
-
-        hboxBudget.prefHeightProperty().bind(
-                budgetCity1.heightProperty()
-                        .add(budgetCity2.heightProperty())
-                        .add(budgetCity3.heightProperty()));
     }
 
 }

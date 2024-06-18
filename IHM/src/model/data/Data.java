@@ -169,4 +169,12 @@ public class Data {
         res += ",\n Population: " + this.population + ",\n Year: " + this.year.getYear();
         return res;
     }
+
+    public String toStringDataApp() {
+        String res = "";
+        res += "Population : " + this.population + "\n";
+        res += "House number : " + this.houseNumber + "\n";
+        res += "flat number : " + this.flatNumber + "\n";
+        return res;
+    }
 }
