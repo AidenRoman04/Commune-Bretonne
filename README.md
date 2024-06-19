@@ -81,7 +81,7 @@ Execution :
 
 Enfin, vous pouvez naviguez à travers l'interface pour explorer les différentes fonctionnalités et visualisations offertes.
 
-<span style="color:red;">Attention : Pour les pages "Comparer | Graphique" et "Comparer | Données", le temps de chargement peut être très long. Veuillez vérifier votre console pour plus de détails.</span>
+<span style="color:red">Attention : Pour les pages "Comparer | Graphique" et "Comparer | Données", le temps de chargement peut être très long. Veuillez vérifier votre console pour plus de détails.</span>
 
 ## Arborescence Principale
 
