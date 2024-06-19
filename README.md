@@ -103,14 +103,10 @@ Enfin, vous pouvez naviguez à travers l'interface pour explorer les différente
         - 📁 ressource
         - 📁 view
 
-## Contributions
+## Screenshots
 
-Les contributions sont les bienvenues ! Veuillez soumettre des demandes de tirage (pull requests) et signaler les problèmes (issues) via le dépôt Git.
+![App Screenshot](/screenshot/screen1.png)
 
 ---
 
 Merci d'utiliser notre application pour explorer l'attractivité des communes bretonnes !
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
