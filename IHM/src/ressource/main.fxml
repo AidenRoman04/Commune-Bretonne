@@ -97,9 +97,9 @@
    <bottom>
       <Pane prefHeight="43.0" prefWidth="950.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="exportButton" layoutX="678.0" layoutY="9.0" mnemonicParsing="false" text="Export" />
-            <ComboBox fx:id="exportBox" layoutX="515.0" layoutY="9.0" prefWidth="150.0" />
-            <Label layoutX="406.0" layoutY="13.0" text="Export DATA">
+            <Button fx:id="exportButton" layoutX="582.0" layoutY="10.0" mnemonicParsing="false" text="Export" />
+            <ComboBox fx:id="exportBox" layoutX="400.0" layoutY="10.0" prefWidth="150.0" />
+            <Label layoutX="279.0" layoutY="13.0" text="Export DATA">
                <font>
                   <Font name="Britannic Bold" size="18.0" />
                </font>
