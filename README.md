@@ -50,22 +50,29 @@ Pour exécuter ce projet, vous aurez besoin des éléments suivants :
 2. Importez le projet dans votre IDE préféré (par exemple, IntelliJ IDEA, Eclipse).
 3. Configurez le projet pour utiliser le JDK et JavaFX.
 4. Assurez-vous que votre base de données est configurée et accessible.
-5. Exécutez le projet. [Installation Guide](#Utilisation)
+5. Exécutez le projet. Cf. [Utilisation](#Utilisation)
 
 
 ## Utilisation
-Lancez l'application depuis votre IDE ou en utilisant la ligne de commande. Naviguez à travers l'interface pour explorer les différentes fonctionnalités et visualisations offertes.
+Lancez l'application depuis votre IDE ou en utilisant les ligne de commande depuis le fichier ws.
 
-## Contributions
-Les contributions sont les bienvenues ! Veuillez soumettre des demandes de tirage (pull requests) et signaler les problèmes (issues) via le dépôt Git.
+Compilation :
 
-## Licence
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+    javac --module-path "..\javafx-sdk-22.0.1\lib" --add-modules javafx.controls,javafx.fxml -d ..\class ..\src\view\*.java ..\src\model\dao\*.java ..\src\model\data\*.java ..\src\model\*.java ..\src\controller\*.java 
 
----
+    xcopy /s /e /y "..\src\ressource" "..\class\ressource"
 
-Merci d'utiliser notre application pour explorer l'attractivité des communes bretonnes !
+    xcopy /s /e /y "..\javafx-sdk-22.0.1" "..\class\javafx-sdk-22.0.1"
 
+    xcopy /s /e /y "..\mysql-connector-j-8.4.0" "..\class\mysql-connector-j-8.4.0"
+
+Execution :
+    
+    java --module-path "..\javafx-sdk-22.0.1\lib" --add-modules javafx.controls,javafx.fxml -cp "..\class" view.MainApp
+
+Enfin, vous pouvez naviguez à travers l'interface pour explorer les différentes fonctionnalités et visualisations offertes.
+
+## Arborescence
 
     📁 /docs
         📄 README.md
@@ -82,10 +89,14 @@ Merci d'utiliser notre application pour explorer l'attractivité des communes br
 
     📄 LICENSE
     📄 .gitignore
-## Documentation
 
-[Documentation](https://linktodocumentation)
+## Contributions
+Les contributions sont les bienvenues ! Veuillez soumettre des demandes de tirage (pull requests) et signaler les problèmes (issues) via le dépôt Git.
 
+
+---
+
+Merci d'utiliser notre application pour explorer l'attractivité des communes bretonnes !
 
 
 
