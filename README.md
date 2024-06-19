@@ -1,7 +1,5 @@
 # SAE - Attractivité des Communes Bretonnes
 
-![Logo](https://www.iutvannes.fr/wp-content/uploads/2020/11/IUT_VANNES_LOGO-sansfondblanc-e1669819263791.png)
-
 ## Authors
 
 - @IsmaëlGuillouet
