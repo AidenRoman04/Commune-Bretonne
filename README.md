@@ -108,6 +108,7 @@ Enfin, vous pouvez naviguez à travers l'interface pour explorer les différente
 ![App Screenshot](/screenshot/screen1.png)
 ![App Screenshot](/screenshot/screen2.png)
 ![App Screenshot](/screenshot/screen3.png)
+![App Screenshot](/screenshot/screen4.png)
 
 ---
 
