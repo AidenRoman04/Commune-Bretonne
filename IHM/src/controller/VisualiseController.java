@@ -104,42 +104,42 @@ public class VisualiseController {
     public void selectGraphmet() throws FileNotFoundException {
         try {
             if (comboGraph.getValue().equals("nb Maison")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\n" + //
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\n" + //
                         "bMais.png");
                 Image image = new Image(inputStream);
                 // Définition de l'image dans l'ImageView
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("nb Appart")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\n" + //
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\n" + //
                         "bApp.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Prix Moyen")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\PrixMoy.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\PrixMoy.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Prix M2 Moyen")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\PrixM2Moy.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\PrixM2Moy.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Surface Moyenne")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\SurfMoy.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\SurfMoy.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Depense Culturelle Totale")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\DepenseCult.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\DepenseCult.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Budget total")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\BudgTot.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\BudgTot.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("population")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\pop.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\pop.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else if (comboGraph.getValue().equals("Distance a une garre")) {
-                FileInputStream inputStream = new FileInputStream("..\\src\\ressource\\data\\img\\DistanceG.png");
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\DistanceG.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
             } else {
