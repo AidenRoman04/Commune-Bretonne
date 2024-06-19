@@ -41,7 +41,7 @@ public class YearDAO extends DAO {
      * @return the years
      */
     public ArrayList<Year> getAllYears() {
-        System.out.println("YearDAO.getAllYears()");
+        System.out.println("Initializing database Year : \t\t4 out of 6");
         ArrayList<Year> res = new ArrayList<Year>();
         try {
             Connection co = getConnection();

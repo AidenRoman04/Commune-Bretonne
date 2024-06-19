@@ -29,7 +29,7 @@ public class CityDAO extends DAO {
      */
     public ArrayList<City> getAllCities() {
         ArrayList<City> res = new ArrayList<>();
-        System.out.println("CityDAO.getAllCities()");
+        System.out.println("Initializing database City : \t\t1 out of 6");
         try {
             Connection co = getConnection();
             PreparedStatement stmt = co.prepareStatement("SELECT * FROM Commune");

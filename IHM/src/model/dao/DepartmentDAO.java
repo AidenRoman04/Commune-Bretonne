@@ -47,7 +47,7 @@ public class DepartmentDAO extends DAO {
      */
     public ArrayList<Department> getAllDepartments() {
         ArrayList<Department> res = new ArrayList<Department>();
-        System.out.println("DepartmentDAO.getAllDepartments()");
+        System.out.println("Initializing database Department : \t2 out of 6");
         try {
             Connection co = getConnection();
             PreparedStatement stmt = co.prepareStatement("SELECT * FROM Departement");

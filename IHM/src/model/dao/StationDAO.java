@@ -44,7 +44,7 @@ public class StationDAO extends DAO {
      * @return the stations
      */
     public ArrayList<Station> getAllStations() {
-        System.out.println("StationDAO.getAllStations()");
+        System.out.println("Initializing database Station : \t3 out of 6");
         ArrayList<Station> res = new ArrayList<>();
         try {
             Connection co = getConnection();

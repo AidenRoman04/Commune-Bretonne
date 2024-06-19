@@ -19,7 +19,7 @@ public class AirportDAO extends DAO {
      */
     public ArrayList<Airport> getAllAirports() {
         ArrayList<Airport> res = new ArrayList<Airport>();
-        System.out.println("AirportDAO.getAllAirports()");
+        System.out.println("Initializing database Airport : \t6 out of 6");
         try {
             Connection co = getConnection();
             PreparedStatement stmt = co.prepareStatement("SELECT * FROM Aeroport");

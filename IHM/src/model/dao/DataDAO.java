@@ -53,7 +53,7 @@ public class DataDAO extends DAO {
      */
     public ArrayList<Data> getAllData() {
         ArrayList<Data> res = new ArrayList<>();
-        System.out.println("DataDAO.getAllData()");
+        System.out.println("Initializing database Data : \t\t5 out of 6");
         try {
             Connection co = getConnection();
             PreparedStatement stmt = co.prepareStatement("SELECT * FROM DonneesAnnuelles");
