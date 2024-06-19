@@ -98,7 +98,7 @@ public class VisualiseController {
 
     public void fillComboBox() {
         comboGraph.getItems().addAll("nb Maison", "nb Appart", "Prix Moyen", "Prix M2 Moyen", "Surface Moyenne",
-                "Depense Culturelle Totale", "Budget total", "population", "Distance a une garre");
+                "Depense Culturelle Totale", "Budget total", "population", "Distance a une garre","excentricité","degré","centraliteDeProximite","centraliteIntermediarite");
     }
 
     public void selectGraphmet() throws FileNotFoundException {
@@ -142,7 +142,23 @@ public class VisualiseController {
                 FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\DistanceG.png");
                 Image image = new Image(inputStream);
                 graphimag.setImage(image);
-            } else {
+            } else if (comboGraph.getValue().equals("excentricité")) {
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\excentricite.png");
+                Image image = new Image(inputStream);
+                graphimag.setImage(image);
+            } else if (comboGraph.getValue().equals("degré")) {
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\degre.png");
+                Image image = new Image(inputStream);
+                graphimag.setImage(image);
+            } else if (comboGraph.getValue().equals("centraliteDeProximite")) {
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\centraliteDeProximite.png");
+                Image image = new Image(inputStream);
+                graphimag.setImage(image);
+            } else if (comboGraph.getValue().equals("centraliteIntermediarite")) {
+                FileInputStream inputStream = new FileInputStream("src\\ressource\\data\\img\\centraliteIntermediarite.png");
+                Image image = new Image(inputStream);
+                graphimag.setImage(image);
+            }else {
                 System.out.println("Error");
             }
         } catch (Exception e) {
