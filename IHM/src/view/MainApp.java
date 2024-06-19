@@ -18,7 +18,7 @@ public class MainApp extends Application {
             Scene scene = new Scene(root, 950, 500);
 
             // Configurer la scène et afficher la fenêtre principale
-            primaryStage.setTitle("Application JavaFX");
+            primaryStage.setTitle("DataBreizh - Visualisation des données");
 
             primaryStage.setScene(scene);
             primaryStage.show();
