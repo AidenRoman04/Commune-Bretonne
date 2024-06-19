@@ -27,6 +27,9 @@ import model.dao.DatabaseDAO;
 import model.data.City;
 import model.data.Database;
 
+/**
+ * Sample Skeleton for 'compare.fxml' Controller Class
+ */
 public class CompareController {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
@@ -83,6 +86,15 @@ public class CompareController {
     @FXML
     private HBox hboxBudget;
 
+    @FXML
+    private ImageView picture1;
+
+    @FXML
+    private ImageView picture2;
+
+    @FXML
+    private ImageView picture3;
+
     private ArrayList<String> cityList = new ArrayList<>();
     private ObservableList<String> observableCityList = FXCollections.observableArrayList();
 
@@ -91,13 +103,9 @@ public class CompareController {
 
     private ArrayList<City> cities;
 
-    @FXML
-    void launchResearchData(ActionEvent event) {
-        // le code doit récupérer les données de la ville dans les ComboBox et grâce au
-        // DAO afficher les informations générales de la ville (nom, population,
-        // superficie, etc.)
-    }
-
+    /**
+     * initialize the different elements of the view
+     */
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         setupEventHandlers();
@@ -123,6 +131,9 @@ public class CompareController {
 
     }
 
+    /**
+     * Setup the event handlers for the view
+     */
     private void setupEventHandlers() {
         // Add event handlers here
         flagHome.onMouseClickedProperty().set(event -> {
@@ -145,7 +156,7 @@ public class CompareController {
     }
 
     /**
-     * remplit la liste des villes dans les ComboBox depuis une arrayList
+     * Fill the city list and the ComboBox with the cities
      */
     public void fillCityList(ArrayList<String> cityList) {
         this.city1.getItems().add("N/A");
@@ -161,6 +172,9 @@ public class CompareController {
         this.city3.setValue("N/A");
     }
 
+    /**
+     * Set the city list
+     */
     public void setCityList() {
         this.cities = database.getCities();
         for (City city : cities) {
@@ -170,6 +184,9 @@ public class CompareController {
         fillCityList(cityList);
     }
 
+    /**
+     * Initialize the database
+     */
     public void initializeDataBase() {
 
         System.out.println("Starting database initialization");
@@ -178,6 +195,9 @@ public class CompareController {
 
     }
 
+    /**
+     * Initialize the ComboBox
+     */
     private void initializeComboBox(ComboBox<String> comboBox) {
         FilteredList<String> filteredItems = new FilteredList<>(observableCityList, p -> true);
 
@@ -206,16 +226,23 @@ public class CompareController {
         });
     }
 
+    /**
+     * call the getInfoCity1, getInfoCity2 and getInfoCity3 methods
+     */
     public void getInfoCity() {
         getInfoCity1();
         getInfoCity2();
         getInfoCity3();
     }
 
+    /**
+     * Get the information of the first city
+     */
     public void getInfoCity1() {
         String text = "City not found"; // Initialisation avec "City not found"
         String budget = "Budget not found"; // Initialisation avec "City not found
         infoCity1.setText("");
+        budgetCity1.setText("");
         if (city1.getValue() != null) {
             for (City city : this.cities) {
                 city1.setVisible(true);
@@ -229,11 +256,15 @@ public class CompareController {
         }
     }
 
+    /**
+     * Get the information of the second city
+     */
     public void getInfoCity2() {
         try {
             String text = "City not found"; // Initialisation avec "City not found"
             String budget = "Budget not found"; // Initialisation avec "City not found
             infoCity2.setText("");
+            budgetCity2.setText("");
             if (city2.getValue() != null) {
                 for (City city : this.cities) {
                     city2.setVisible(true);
@@ -250,10 +281,14 @@ public class CompareController {
         }
     }
 
+    /**
+     * Get the information of the third city
+     */
     public void getInfoCity3() {
         String text = "City not found"; // Initialisation avec "City not found"
         String budget = "Budget not found"; // Initialisation avec "City not found
         infoCity3.setText("");
+        budgetCity3.setText("");
         if (city3.getValue() != null) {
             for (City city : this.cities) {
                 city3.setVisible(true);
