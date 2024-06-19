@@ -77,21 +77,21 @@
                                  preserveRatio="true">
                                  <image>
                                     <Image
-                                       url="@data/img/ambiance-terrasse-destination-rennes-jm-17-640x480.jpg" />
+                                       url="@data/img/vannes.png" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="picture2" fitHeight="150.0" fitWidth="200.0"
                                  pickOnBounds="true"
                                  preserveRatio="true">
                                  <image>
-                                    <Image url="@data/img/lannion-5-640x480.jpg" />
+                                    <Image url="@data/img/brest.png" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="picture3" fitHeight="150.0" fitWidth="200.0"
                                  pickOnBounds="true"
                                  preserveRatio="true">
                                  <image>
-                                    <Image url="@data/img/vannes-2-1920x960.jpg" />
+                                    <Image url="@data/img/rennes.png" />
                                  </image>
                               </ImageView>
                            </children>
