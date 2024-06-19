@@ -104,6 +104,12 @@ public class City {
         }
     }
 
+    /**
+     * Add a neighbour to the city
+     * 
+     * @param otherCity
+     * @return
+     */
     public boolean isNeighbour(City otherCity) {
         if (otherCity == null) {
             throw new IllegalArgumentException("City cannot be empty");
@@ -125,10 +131,15 @@ public class City {
         for (Data d : this.data) {
             res += d.toStringDataApp();
         }
-
         return res;
     }
 
+    /**
+     * print the city information for the app :
+     * hab, km²,hab/km², dep and the airports/stations
+     * 
+     * @return
+     */
     public String toStringAppBudget() {
         String res = "";
         for (Data d : this.data) {
