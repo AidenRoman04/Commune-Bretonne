@@ -1,0 +1,104 @@
+{
+  // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+  // Pointez pour afficher la description des attributs existants.
+  // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "view.MainApp",
+      "projectName": "",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "view.MainApp",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "CarteApp",
+      "request": "launch",
+      "mainClass": "CarteApp",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "CarteApp",
+      "request": "launch",
+      "mainClass": "view.CarteApp",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "view.Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "YourProject/view.Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "vue.Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "home.Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "vue.MainApp",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Tst",
+      "request": "launch",
+      "mainClass": "Tst",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "vue.Main",
+      "projectName": "IHM_e7b45eef",
+      "vmArgs": "--module-path C:/Users/alexa/OneDrive/Documents/javafx-sdk-22.0.1/lib --add-modules javafx.controls"
+    }
+  ]
+}

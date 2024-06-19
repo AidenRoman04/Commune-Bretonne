@@ -12,7 +12,7 @@ import model.data.Year;
 /**
  * This class creates Data objects and Data arrays using the database
  */
-public class DataDAO extends DAO<Data> {
+public class DataDAO extends DAO {
     /**
      * Returns all the data from a given city
      * 

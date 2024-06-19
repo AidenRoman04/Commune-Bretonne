@@ -24,20 +24,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareController">
+<BorderPane prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompareController">
    <top>
       <AnchorPane prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="flagHome" fitHeight="63.0" fitWidth="90.0" layoutX="-9.0"
-               pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="flagHome" fitHeight="63.0" fitWidth="90.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@data/img/flag.png" />
                </image>
             </ImageView>
             <TextField fx:id="citySearchField" layoutX="752.0" layoutY="19.0" />
-            <Button layoutX="908.0" layoutY="19.0" mnemonicParsing="false"
-               style="-fx-background-color: null;" text="🔍" />
+            <Button layoutX="908.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: null;" text="🔍" />
          </children>
       </AnchorPane>
    </top>
@@ -48,8 +45,7 @@
                <children>
                   <Pane prefHeight="166.0" prefWidth="935.0">
                      <children>
-                        <Label layoutX="412.0" layoutY="36.0" prefHeight="47.0" prefWidth="111.0"
-                           text="Comparer">
+                        <Label layoutX="412.0" layoutY="36.0" prefHeight="47.0" prefWidth="111.0" text="Comparer">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -58,8 +54,7 @@
                   </Pane>
                   <Pane fx:id="checkBoxPane" prefHeight="322.0" prefWidth="935.0">
                      <children>
-                        <HBox alignment="TOP_CENTER" layoutX="-2.0" prefHeight="100.0"
-                           prefWidth="950.0" spacing="50.0">
+                        <HBox alignment="TOP_CENTER" layoutX="-2.0" prefHeight="100.0" prefWidth="950.0" spacing="50.0">
                            <children>
                               <ComboBox fx:id="city1" prefWidth="150.0" />
                               <ComboBox fx:id="city2" prefWidth="150.0" />
@@ -69,36 +64,26 @@
                               <Insets />
                            </opaqueInsets>
                         </HBox>
-                        <HBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="100.0"
-                           prefHeight="100.0" prefWidth="940.0" spacing="20.0">
+                        <HBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="100.0" prefHeight="100.0" prefWidth="940.0" spacing="20.0">
                            <children>
-                              <ImageView fx:id="picture1" fitHeight="150.0" fitWidth="200.0"
-                                 pickOnBounds="true"
-                                 preserveRatio="true">
+                              <ImageView fx:id="picture1" fitHeight="133.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image
-                                       url="@data/img/vannes.png" />
+                                    <Image url="@data/img/ambiance-terrasse-destination-rennes-jm-17-640x480.jpg" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="picture2" fitHeight="150.0" fitWidth="200.0"
-                                 pickOnBounds="true"
-                                 preserveRatio="true">
+                              <ImageView fx:id="picture2" fitHeight="134.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@data/img/lannion-5-640x480.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="picture3" fitHeight="172.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@data/img/brest.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="picture3" fitHeight="150.0" fitWidth="200.0"
-                                 pickOnBounds="true"
-                                 preserveRatio="true">
-                                 <image>
-                                    <Image url="@data/img/rennes.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </HBox>
-                        <Button fx:id="compare" layoutX="382.0" layoutY="262.0"
-                           mnemonicParsing="false" prefHeight="46.0" prefWidth="172.0"
-                           text="Visualiser les données">
+                        <Button fx:id="compare" layoutX="382.0" layoutY="262.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #444444;" text="Visualiser les données" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -108,14 +93,11 @@
                   <Pane prefHeight="114.0" prefWidth="935.0">
                      <children>
                         <Label layoutX="170.0" layoutY="58.0" text="Informations générales" />
-                        <Separator layoutX="170.0" layoutY="29.0" prefWidth="600.0"
-                           style="-fx-background-color: #595959;" />
-                        <Separator layoutX="170.0" layoutY="93.0" prefHeight="0.0" prefWidth="600.0"
-                           style="-fx-background-color: #595959;" />
+                        <Separator layoutX="170.0" layoutY="29.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
+                        <Separator layoutX="170.0" layoutY="93.0" prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
                      </children>
                   </Pane>
-                  <HBox fx:id="hboxInfo" alignment="CENTER" prefHeight="358.0" prefWidth="935.0"
-                     spacing="20.0">
+                  <HBox fx:id="hboxInfo" alignment="CENTER" prefHeight="358.0" prefWidth="935.0" spacing="20.0">
                      <children>
                         <Label fx:id="infoCity1" alignment="CENTER" text="Label1" />
                         <Label fx:id="infoCity2" alignment="CENTER" text="Label2" />
@@ -124,15 +106,12 @@
                   </HBox>
                   <Pane prefHeight="81.0" prefWidth="935.0">
                      <children>
-                        <Separator layoutX="170.0" layoutY="55.0" prefWidth="600.0"
-                           style="-fx-background-color: #595959;" />
-                        <Separator layoutX="168.0" layoutY="15.0" prefWidth="600.0"
-                           style="-fx-background-color: #595959;" />
+                        <Separator layoutX="170.0" layoutY="55.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
+                        <Separator layoutX="168.0" layoutY="15.0" prefWidth="600.0" style="-fx-background-color: #595959;" />
                         <Label layoutX="170.0" layoutY="28.0" text="Budgets" />
                      </children>
                   </Pane>
-                  <HBox fx:id="hboxInfo1" alignment="CENTER" prefHeight="358.0" prefWidth="935.0"
-                     spacing="20.0">
+                  <HBox fx:id="hboxInfo1" alignment="CENTER" prefHeight="358.0" prefWidth="935.0" spacing="20.0">
                      <children>
                         <Label fx:id="budgetCity1" alignment="CENTER" text="Label1" />
                         <Label fx:id="budgetCity2" alignment="CENTER" text="Label2" />

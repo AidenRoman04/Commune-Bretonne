@@ -11,7 +11,7 @@ import model.data.Station;
 /**
  * This class creates Station objects and Station arrays using the database
  */
-public class StationDAO extends DAO<Station> {
+public class StationDAO extends DAO {
     /**
      * Returns all the stations of a given city
      * 

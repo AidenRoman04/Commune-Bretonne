@@ -15,7 +15,7 @@ import model.data.Station;
 /**
  * This class creates City objects and City arrays using the database
  */
-public class CityDAO extends DAO<City> {
+public class CityDAO extends DAO {
     private DepartmentDAO departmentDAO = new DepartmentDAO();
     private StationDAO stationDAO = new StationDAO();
     private DataDAO dataDAO = new DataDAO();

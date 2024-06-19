@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * This class connects to the database and returns the connection
  */
-public abstract class DAO<T> {
+public abstract class DAO {
     private static String url = "jdbc:mysql://localhost:3306/sae201";
     private static String username = "root";
     private static String password = "root";

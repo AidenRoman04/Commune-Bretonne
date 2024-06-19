@@ -11,7 +11,7 @@ import model.data.Year;
 /**
  * This class creates Year objects and Year arrays using the database
  */
-public class YearDAO extends DAO<Year> {
+public class YearDAO extends DAO {
     /**
      * Returns the given year
      * 

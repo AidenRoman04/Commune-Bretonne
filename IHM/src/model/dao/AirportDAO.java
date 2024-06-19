@@ -11,7 +11,7 @@ import model.data.Airport;
 /**
  * This class creates Airport objects and Airport arrays using the database
  */
-public class AirportDAO extends DAO<Airport> {
+public class AirportDAO extends DAO {
     /**
      * Returns all the airports from the database
      * 

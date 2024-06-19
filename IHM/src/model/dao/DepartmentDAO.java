@@ -13,7 +13,7 @@ import model.data.Department;
  * This class creates Department objects and Department arrays using the
  * database
  */
-public class DepartmentDAO extends DAO<Department> {
+public class DepartmentDAO extends DAO {
     /**
      * Returns the department from his id
      * 
