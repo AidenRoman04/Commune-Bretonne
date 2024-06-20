@@ -116,4 +116,8 @@ Enfin, vous pouvez naviguez à travers l'interface pour explorer les différente
 
 ---
 
+## GitHub
+
+[GitHub](https://github.com/AidenRoman04/Commune-Bretonne.git)
+
 Merci d'utiliser notre application pour explorer l'attractivité des communes bretonnes !
