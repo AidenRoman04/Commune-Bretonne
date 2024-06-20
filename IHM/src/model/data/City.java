@@ -143,7 +143,7 @@ public class City {
     public String toStringAppBudget() {
         String res = "";
         for (Data d : this.data) {
-            res += d.toStringDataAppBudgetData();
+            res += d.toStringDataAppBudget();
         }
         res += "\nDepartment (2019) : " + this.department.toStringAppBudget() + ",\n";
         return res;

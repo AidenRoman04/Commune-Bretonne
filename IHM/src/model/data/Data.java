@@ -181,7 +181,7 @@ public class Data {
         return res;
     }
 
-    public String toStringDataAppBudgetData() {
+    public String toStringDataAppBudget() {
         String res = "";
         res += " - Year : " + this.year.getYear() + "\n";
         if (this.totalBudget != -1) {
