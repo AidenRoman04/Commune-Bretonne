@@ -2,7 +2,7 @@
 
 ## Authors
 
-- @IsmaëlGuillouet
+- [@IsmaëlGuillouet](https://github.com/Guismael)
 - @NathanLefèvre
 - [@BaptisteHba](https://github.com/BaptisteHba)
 - @MartinHuetChapuis
